@@ -80,19 +80,39 @@
             <span class="step-number">03</span>
             <h3>Look around</h3>
             <p>Switch branches to see each version. The unmerged work comes with you.</p>
-            <code>git switch main</code>
+            <code>git switch master</code>
           </article>
         </div>
       </div>
     </section>
 
     <section class="next section-wrap" id="next" aria-labelledby="next-title">
-      <div class="section-label"><span>03</span><span>STILL TO COME</span></div>
+      <div class="section-label"><span>03</span><span>MERGE YOUR WORK</span></div>
       <div class="next-content">
-        <p class="eyebrow">THE SECOND HALF</p>
+        <p class="eyebrow">WHEN YOUR FEATURE IS READY</p>
         <h2 id="next-title">Bring the paths back together.</h2>
-        <p>This is where your next branch can pick up: add a short guide to merging, resolving conflicts, and cleaning up old branches.</p>
-        <span class="unfinished">SECTION IN PROGRESS <span aria-hidden="true">✳</span></span>
+        <p>Commit your changes on the feature branch first. Then switch to <code>master</code> and merge the feature into it.</p>
+        <div class="merge-steps">
+          <article class="merge-step">
+            <span class="step-number">01</span>
+            <h3>Save your changes</h3>
+            <p>Commit the work while you are still on the feature branch.</p>
+            <code>git add .<br>git commit -m "Add site tweaks"</code>
+          </article>
+          <article class="merge-step">
+            <span class="step-number">02</span>
+            <h3>Switch to master</h3>
+            <p>The merge adds your feature's commits to this branch.</p>
+            <code>git switch master</code>
+          </article>
+          <article class="merge-step">
+            <span class="step-number">03</span>
+            <h3>Bring it together</h3>
+            <p>Merge the feature branch into the branch you are on.</p>
+            <code>git merge feature/site-tweaks</code>
+          </article>
+        </div>
+        <p class="merge-cleanup">After the merge succeeds, you can remove the feature branch: <code>git branch -d feature/site-tweaks</code></p>
       </div>
     </section>
   </main>

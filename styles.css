@@ -131,8 +131,15 @@ h1 em { font-family: var(--serif); color: var(--green-dark); font-weight: 600; }
 .next-content { max-width: 680px; }
 .next-content .eyebrow { color: var(--orange); margin-bottom: 15px; }
 .next-content h2 { max-width: 520px; }
-.unfinished { display: inline-block; margin-top: 24px; padding: 9px 11px; border: 1px dashed #9aa59a; color: var(--muted); }
-.unfinished span { padding-left: 10px; color: var(--orange); }
+.merge-steps { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 30px; border-top: 1px solid var(--line); }
+.merge-step { min-width: 0; padding: 18px 18px 0 0; }
+.merge-step + .merge-step { padding-left: 18px; border-left: 1px solid var(--line); }
+.merge-step .step-number { color: var(--green-dark); }
+.merge-step h3 { margin: 18px 0 8px; font-size: 15px; font-weight: 600; }
+.merge-step p { min-height: 60px; color: var(--muted); line-height: 1.6; font-size: 12px; }
+.merge-step code { display: block; padding: 10px; color: var(--green-dark); background: #e5e9dd; font: 10px/1.7 var(--mono); overflow-wrap: anywhere; }
+.merge-cleanup { margin-top: 21px !important; font-size: 12px !important; }
+.merge-cleanup code { color: var(--green-dark); overflow-wrap: anywhere; }
 .footer { min-height: 66px; padding: 0 7.2%; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--line); }
 .footer .wordmark { font-size: 15px; }
 .footer > span, .footer > a:last-child { color: var(--muted); }
@@ -173,6 +180,10 @@ h1 em { font-family: var(--serif); color: var(--green-dark); font-weight: 600; }
   .step p { min-height: 0; margin: 0; max-width: 340px; }
   .step code { max-width: 350px; margin-top: 14px; }
   .next-content { margin-top: 30px; }
+  .merge-steps { display: block; }
+  .merge-step, .merge-step + .merge-step { padding: 18px 0; border-left: 0; border-bottom: 1px solid var(--line); }
+  .merge-step h3 { margin: 12px 0 6px; }
+  .merge-step p { min-height: 0; margin: 0 0 12px; }
   .footer { padding: 0 6%; min-height: 62px; }
   .footer > span { display: none; }
   .footer > a:last-child { font-size: 9px; }
