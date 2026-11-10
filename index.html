@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2f3ed">
+  <title>Branching Out | A tiny guide to Git branches</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="wordmark" href="#top" aria-label="Branching Out home">branching<span>out</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#idea">The idea</a>
+      <a href="#workflow">A first workflow</a>
+      <a class="nav-cta" href="#next">What's next <span aria-hidden="true">↘</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> A FIELD GUIDE TO GIT</p>
+        <h1 id="hero-title">Make room<br>to <em>try things.</em></h1>
+        <p class="intro">A branch is a safe place to work on an idea without disturbing the version that already works.</p>
+        <a class="text-link" href="#idea">Get the idea <span aria-hidden="true">↓</span></a>
+      </div>
+
+      <div class="branch-art" role="img" aria-label="A commit graph: the main branch continues while a feature branch splits off and gets its own commits.">
+        <div class="art-topline">
+          <span>PROJECT / TIMELINE</span>
+          <span class="live-dot">● &nbsp; IN PROGRESS</span>
+        </div>
+        <div class="graph">
+          <div class="track main-track"></div>
+          <div class="track feature-track"></div>
+          <div class="fork-line"></div>
+          <span class="node main n1"></span>
+          <span class="node main n2"></span>
+          <span class="node feature n3"></span>
+          <span class="node feature n4"></span>
+          <span class="node main n5"></span>
+          <span class="node main n6"></span>
+          <span class="branch-tag main-tag">main</span>
+          <span class="branch-tag feature-tag">feature / search</span>
+          <span class="graph-note">your work stays separate</span>
+        </div>
+        <div class="art-footer"><span>01</span><span>EVERY COMMIT HAS A PLACE</span><span>↗</span></div>
+      </div>
+      <div class="hero-index" aria-hidden="true">01 — 03</div>
+    </section>
+
+    <section class="idea section-wrap" id="idea" aria-labelledby="idea-title">
+      <div class="section-label"><span>01</span><span>THE IDEA</span></div>
+      <div class="idea-content">
+        <h2 id="idea-title">Think of a branch as a <span>bookmark</span> for your work.</h2>
+        <p>Git keeps a pointer to a commit. When you create a branch, you give that pointer a new name. Commits you make on it move the new name forward; your other branch stays put.</p>
+      </div>
+      <div class="bookmark-note"><span class="note-mark">↳</span><p>Same project.<br>A different path through it.</p></div>
+    </section>
+
+    <section class="workflow" id="workflow" aria-labelledby="workflow-title">
+      <div class="section-wrap workflow-inner">
+        <div class="section-label"><span>02</span><span>YOUR FIRST WORKFLOW</span></div>
+        <h2 id="workflow-title">Three small moves.</h2>
+        <div class="steps">
+          <article class="step">
+            <span class="step-number">01</span>
+            <h3>Start a branch</h3>
+            <p>Name the idea you want to work on. Your current branch stays untouched.</p>
+            <code>git switch -c feature/search</code>
+          </article>
+          <article class="step">
+            <span class="step-number">02</span>
+            <h3>Make a commit</h3>
+            <p>Change files, check your work, then save a snapshot on this branch.</p>
+            <code>git add .<br>git commit -m "Add search"</code>
+          </article>
+          <article class="step">
+            <span class="step-number">03</span>
+            <h3>Look around</h3>
+            <p>Switch branches to see each version. The unmerged work comes with you.</p>
+            <code>git switch main</code>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="next section-wrap" id="next" aria-labelledby="next-title">
+      <div class="section-label"><span>03</span><span>STILL TO COME</span></div>
+      <div class="next-content">
+        <p class="eyebrow">THE SECOND HALF</p>
+        <h2 id="next-title">Bring the paths back together.</h2>
+        <p>This is where your next branch can pick up: add a short guide to merging, resolving conflicts, and cleaning up old branches.</p>
+        <span class="unfinished">SECTION IN PROGRESS <span aria-hidden="true">✳</span></span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="wordmark" href="#top">branching<span>out</span></a><span>ONE IDEA AT A TIME.</span><a href="#top">Back to top ↑</a></footer>
+</body>
+</html>
